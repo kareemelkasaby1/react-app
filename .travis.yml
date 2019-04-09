@@ -1,7 +1,7 @@
-
+sudo: required
 services:
   - docker
-before-install:
+before_install:
   - docker build -t kokoelkasaby/dockerreact -f Dockerfile.dev .
 script:
   - docker run kokoelkasaby/dockerreact npm run test -- --coverage
